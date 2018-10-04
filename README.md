@@ -17,10 +17,10 @@ Get your gateway + iface :
 Put those datas in there :
 ```python
 # Parameters                                                                    
-gateway_ip = "10.41.254.254"
-target_ip = "10.41.254.254"
+gateway_ip = ""
+target_ip = ""
 packet_count = 1000
-conf.iface = "wlo1"
+conf.iface = ""
 ```
 
 Run it :
