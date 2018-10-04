@@ -20,5 +20,6 @@ Open pcac in Wireshark and Voila !
 All your arp caches are belong to us !
 
 
-# Note
-For some reasons, Apple devices under the latest releases tend to interrupt the poisoning. I need to investigate on that, feel free to PR it.
+## Note
+For some reasons, Apple devices (under the latest releases) tend to interrupt the poisoning once an authenticated SSL request is made.
+I need to investigate on that, feel free to PR it.
