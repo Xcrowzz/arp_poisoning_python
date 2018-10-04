@@ -6,7 +6,9 @@ Basically, this script uses your iface, gateway and a target IP to fetch every M
 ## Requirements
 python2.7
 
-Unix based system (Or any real OS, get that Windows crap out of your pc folks)
+scapy (https://scapy.net/)
+
+Unix based system (Or any real OS, get that Windows crap out of your pc folks, stay safe!)
 
 ## Usage
 Get your gateway + iface : 
@@ -38,6 +40,7 @@ All your ARP caches are belong to us !
 
 ## Notes
 For some reasons, Apple devices (under the latest releases) tend to interrupt the poisoning once an authenticated SSL request is made.
+
 I need to investigate on that, feel free to PR it.
 
 
