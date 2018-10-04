@@ -15,7 +15,7 @@ Just change :
 ```python
     os.system("sysctl -w net.ipv4.ip_forward=0")
 ```
-To enable the ipv4 forwarding on your system (It appears both in the script so watch out).
+To enable the ipv4 forwarding on your system (It appears twice in the script, so watch out).
 
 
 ## Usage
