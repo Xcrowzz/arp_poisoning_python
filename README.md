@@ -1,15 +1,19 @@
 # arp_poisoning_python
 
-Requirement : python2.7
+## Requirement
+python2.7
 
-Get your gateway + iface : ?> ip route | grep default
+Get your gateway + iface : 
+?> ip route | grep default
 
-Usage : sudo python2.7 arp_poison.py
+## Usage
+?> sudo python2.7 arp_poison.py
 
 CTRL+C to stop and write to TARGET_IP_capture.pcac file.
 
-Open pcac in Wireshark and Voila, the arp cache of your target is fucked up. 
+Open pcac in Wireshark and Voila ! 
 
+All your arp caches are belong to us !
 
 
 # Note
