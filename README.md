@@ -10,6 +10,14 @@ scapy (https://scapy.net/)
 
 Unix based system (Or any real OS, get that Windows crap out of your pc folks, stay safe!)
 
+(You can easily trick it to work under Windows and OSX, I did not test it though).
+Just change : 
+```python
+    os.system("sysctl -w net.ipv4.ip_forward=0")
+```
+To enable the ipv4 forwarding on your system (It appears both in the script so watch out).
+
+
 ## Usage
 Get your gateway + iface : 
 ```bash
