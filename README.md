@@ -1,7 +1,7 @@
 # arp_poisoning_python
 
-## 101
-Basically, this script uses your iface, gateway and a target IP to fetch every MAC addresses. Once done, it forges ARP requests to poison the target's cache. Then, it sniffes it and writes to a pcap file that can be opened in Wireshark. It doesn't need much resources to run, but the target will feel latencies and can be alerted by any ARP cache monitoring SAS deployed. So, watch out.
+## MitM 101
+Basically, this script uses your iface, gateway and a target IP to fetch every MAC addresses. Once done, it forges ARP requests to poison the target's cache. Then, it sniffes it MitM style and writes to a pcap file that can be opened in Wireshark. It doesn't need much resources to run, but the target will feel latencies and can be alerted by any ARP cache monitoring SAS deployed. So, watch out.
 
 ## Requirements
 python2.7
